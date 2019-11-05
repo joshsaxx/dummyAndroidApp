@@ -1,0 +1,99 @@
+<resources>
+    <string name="app_name">My DummyProj</string>
+
+
+    <string-array name="collegeSpinner_items">
+        <item>Select College</item>
+        <item>College of Atlanta</item>
+    </string-array>
+
+    <string-array name="branchSpinner_items">
+        <item>Select Branch</item>
+        <item>City Campus</item>
+        <item>Kaneshie Campus</item>
+    </string-array>
+
+    <string-array name="yearSpinner_items">
+        <item>Select Year</item>
+        <item>2019</item>
+        <item>2018</item>
+        <item>2017</item>
+    </string-array>
+
+    <string-array name="deptSpinner_items">
+        <item>Select Department</item>
+        <item>Computer Science</item>
+        <item>Chemistry</item>
+        <item>Business</item>
+    </string-array>
+
+    <string-array name="courseSpinner_items">
+        <item>Select Course</item>
+        <item>CSIT 401</item>
+        <item>CHEM 402</item>
+        <item>BUS 403</item>
+    </string-array>
+
+    <string-array name="colgrpSpinner_items">
+        <item>Select College or Group</item>
+        <item>College of Atlanta</item>
+    </string-array>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+    <string name="action_settings_message">You selected Settings.</string>
+    <string name="action_notifications_message">You selected Notifications.</string>
+    <string name="action_logout_message">You selected Log out.</string>
+
+
+    <string name="title_placeholder">Title</string>
+    <string name="news_placeholder">News</string>
+    <string name="sports_info_placeholder">Here is some news</string>
+
+
+    <string-array name="sports_titles">
+        <item>Baseball</item>
+        <item>Badminton</item>
+        <item>Basketball</item>
+        <item>Bowling</item>
+        <item>Cycling</item>
+        <item>Golf</item>
+        <item>Running</item>
+        <item>Soccer</item>
+        <item>Swimming</item>
+        <item>Table Tennis</item>
+        <item>Tennis</item>
+    </string-array>
+
+    <string-array name="sports_info">
+        <item>Here is some Baseball news!</item>
+        <item>Here is some Badminton news!</item>
+        <item>Here is some Basketball news!</item>
+        <item>Here is some Bowling news!</item>
+        <item>Here is some Cycling news!</item>
+        <item>Here is some Golf news!</item>
+        <item>Here is some Running news!</item>
+        <item>Here is some Soccer news!</item>
+        <item>Here is some Swimming news!</item>
+        <item>Here is some Table Tennis news!</item>
+        <item>Here is some Tennis news!</item>
+    </string-array>
+
+    <array name="sports_images">
+        <item>@drawable/img_baseball</item>
+        <item>@drawable/img_badminton</item>
+        <item>@drawable/img_basketball</item>
+        <item>@drawable/img_bowling</item>
+        <item>@drawable/img_cycling</item>
+        <item>@drawable/img_golf</item>
+        <item>@drawable/img_running</item>
+        <item>@drawable/img_soccer</item>
+        <item>@drawable/img_swimming</item>
+        <item>@drawable/img_tabletennis</item>
+        <item>@drawable/img_tennis</item>
+    </array>
+
+
+</resources>

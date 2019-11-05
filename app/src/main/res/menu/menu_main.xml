@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item
+        android:id="@+id/action_logout"
+        android:orderInCategory="100"
+        android:onClick="showStudentLogin"
+        android:title="Log Out"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_notifications"
+        android:orderInCategory="10"
+        android:title="Notifications"
+        android:icon="@drawable/ic_action_notification"
+        app:showAsAction="always"/>
+
+    <item
+        android:id="@+id/action_settings"
+        android:orderInCategory="30"
+        android:title="Settings"
+        app:showAsAction="never"/>
+</menu>
