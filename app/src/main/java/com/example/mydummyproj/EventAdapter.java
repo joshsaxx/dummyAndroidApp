@@ -14,7 +14,7 @@ import com.bumptech.glide.Glide;
 
 import java.util.List;
 
-public class EventAdapter  extends RecyclerView.Adapter<EventVHclass.EventViewholder> {
+public class EventAdapter  extends RecyclerView.Adapter<EventVHclass> {
 
     List<Events> eventsList;
     Context context;
@@ -27,12 +27,12 @@ public class EventAdapter  extends RecyclerView.Adapter<EventVHclass.EventViewho
 
     @NonNull
     @Override
-    public EventVHclass.EventViewholder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        return new EventVHclass.EventViewholder(LayoutInflater.from(context).inflate(R.layout.events_tab_fragment_item, parent, false));
+    public EventVHclass onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        return new EventVHclass(LayoutInflater.from(context).inflate(R.layout.events_tab_fragment_item, parent, false));
     }
 
     @Override
-    public void onBindViewHolder(@NonNull EventVHclass.EventViewholder holder, int position) {
+    public void onBindViewHolder(@NonNull EventVHclass holder, int position) {
         Events events = eventsList.get(position);
         holder.title.setText(events.getTitle());
         holder.subtitle.setText(events.getSubtitle());
