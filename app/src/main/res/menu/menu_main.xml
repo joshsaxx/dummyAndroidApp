@@ -14,7 +14,7 @@
         android:id="@+id/action_notifications"
         android:orderInCategory="10"
         android:title="Notifications"
-        android:icon="@drawable/ic_action_notification"
+        android:icon="@drawable/ic_notify"
         app:showAsAction="always"/>
 
     <item
