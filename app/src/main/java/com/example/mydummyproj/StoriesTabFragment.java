@@ -3,8 +3,10 @@ package com.example.mydummyproj;
 
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -26,6 +28,8 @@ public class StoriesTabFragment extends Fragment {
     List <Stories> stories;
 
 
+
+
     public StoriesTabFragment() {
         // Required empty public constructor
     }
@@ -35,15 +39,17 @@ public class StoriesTabFragment extends Fragment {
         super.onCreate(savedInstanceState);
 
         stories = new ArrayList<>();
-        Stories story = new Stories("Daily Guide", "learns android", R.drawable.dg);
+        final Stories story = new Stories("Daily Guide", "learns android", R.drawable.dg );
         story.setSubtitle("a subtitle we like");
 
         stories.add(story);
 
-        Stories story2 =new Stories("Citi News", "teaches android", R.drawable.citi);
+        final Stories story2 =new Stories("Citi News", "teaches android", R.drawable.citi);
         story2.setSubtitle("another subtitle we like");
 
         stories.add(story2);
+
+
     }
 
     @Override
@@ -56,7 +62,7 @@ public class StoriesTabFragment extends Fragment {
 
         RecyclerView recyclerView = view.findViewById(R.id.recyclerView);
 
-        StoryAdapter stadptr = new StoryAdapter(getContext(), stories);
+        final StoryAdapter stadptr = new StoryAdapter(getContext(), stories);
         recyclerView.setAdapter(stadptr);
 
 
@@ -67,6 +73,22 @@ public class StoriesTabFragment extends Fragment {
 
         //this function informs the adapter that the list of stories has changed
         stadptr.notifyDataSetChanged();
+
+        ItemTouchHelper helper = new ItemTouchHelper(new ItemTouchHelper.SimpleCallback(0,ItemTouchHelper.LEFT | ItemTouchHelper.RIGHT) {
+            @Override
+            public boolean onMove(@NonNull RecyclerView recyclerView, @NonNull RecyclerView.ViewHolder viewHolder, @NonNull RecyclerView.ViewHolder target) {
+                return false;
+            }
+
+            @Override
+            public void onSwiped(@NonNull RecyclerView.ViewHolder viewHolder, int direction) {
+                stories.remove(viewHolder.getAdapterPosition());
+                stadptr.notifyItemChanged(viewHolder.getAdapterPosition());
+
+            }
+        });
+
+        helper.attachToRecyclerView(recyclerView);
 
 
         return view;

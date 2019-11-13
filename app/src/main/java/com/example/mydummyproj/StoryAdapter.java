@@ -1,6 +1,7 @@
 package com.example.mydummyproj;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -58,7 +59,9 @@ class StoryAdapter extends RecyclerView.Adapter<StoryAdapter.StoryViewHolder> {
 
     //this is a class for the view of a single story item
     //it must extend RecyclerView.ViewHolder because it is a viewholder
-    class StoryViewHolder extends RecyclerView.ViewHolder{
+    class StoryViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
+
+
 
         //we need to create parameters, for each of the component views of the story item
         TextView title, subtitle, newstitle;
@@ -71,9 +74,19 @@ class StoryAdapter extends RecyclerView.Adapter<StoryAdapter.StoryViewHolder> {
 
             title = itemView.findViewById(R.id.title);
             subtitle = itemView.findViewById(R.id.subTitle);
-            image = itemView.findViewById(R.id.sportsImage);
+            image = itemView.findViewById(R.id.storyImage);
+
+            itemView.setOnClickListener(this);
 
             //implement the rest
+        }
+
+        @Override
+        public void onClick(View v) {
+
+            Intent detailIntent = new Intent(context, StoryDetailActivity.class);
+
+
         }
     }
 }
