@@ -87,6 +87,8 @@ class StoryAdapter extends RecyclerView.Adapter<StoryAdapter.StoryViewHolder> {
             Intent detailIntent = new Intent(context, StoryDetailActivity.class);
 
 
+
+
         }
     }
 }

@@ -8,8 +8,8 @@
 
     <Button
         android:id="@+id/student_btn"
-        android:layout_width="254dp"
-        android:layout_height="94dp"
+        android:layout_width="260dp"
+        android:layout_height="95dp"
         android:onClick="showStudentLogin"
         android:text="student"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -21,8 +21,8 @@
 
     <Button
         android:id="@+id/clbhead_btn"
-        android:layout_width="254dp"
-        android:layout_height="94dp"
+        android:layout_width="260dp"
+        android:layout_height="95dp"
         android:layout_marginTop="24dp"
         android:onClick="showClubheadLogin"
         android:text="club head"
@@ -33,8 +33,8 @@
 
     <Button
         android:id="@+id/faculty_btn"
-        android:layout_width="254dp"
-        android:layout_height="94dp"
+        android:layout_width="260dp"
+        android:layout_height="95dp"
         android:layout_marginTop="24dp"
         android:onClick="showFacultyLogin"
         android:text="faculty"
@@ -45,13 +45,14 @@
 
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:layout_marginLeft="24dp"
         android:layout_marginTop="100dp"
         android:layout_marginEnd="24dp"
         android:layout_marginRight="24dp"
+        android:gravity="center_horizontal"
         android:text="Please Select The Catergory You Belong To:"
         android:textSize="18sp"
         android:textStyle="bold"
