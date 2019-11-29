@@ -8,8 +8,11 @@
     android:layout_height="wrap_content"
     android:layout_margin="8dp"
     android:orientation="vertical"
+    android:clickable="true"
     app:cardCornerRadius="20dp">
-    //app:cardBackgroundColor="?android:attr/colorButtonNormal">
+<!--app:cardBackgroundColor="?android:attr/colorButtonNormal">-->
+
+    <!-- something-->
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"

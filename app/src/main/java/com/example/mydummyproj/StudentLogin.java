@@ -105,6 +105,9 @@ public class StudentLogin extends AppCompatActivity implements View.OnClickListe
         switch (v.getId()) {
             case R.id.loginButton:
                 userSignin();
+                /**Intent intent = new Intent(StudentLogin.this, StudentHmepage.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(intent);*/
                 break;
         }
         switch (v.getId()) {

@@ -3,8 +3,10 @@ package com.example.mydummyproj;
 
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
@@ -53,7 +55,7 @@ public class EventsTabFragment extends Fragment {
 
         RecyclerView recyclerView = view.findViewById(R.id.recyclerView);
 
-        EventAdapter stadptr = new EventAdapter(getContext(), events);
+        final EventAdapter stadptr = new EventAdapter(getContext(), events);
         recyclerView.setAdapter(stadptr);
 
 
@@ -65,7 +67,20 @@ public class EventsTabFragment extends Fragment {
         //this function informs the adapter that the list of stories has changed
         stadptr.notifyDataSetChanged();
 
+        ItemTouchHelper helper = new ItemTouchHelper(new ItemTouchHelper.SimpleCallback(0, ItemTouchHelper.LEFT) {
+            @Override
+            public boolean onMove(@NonNull RecyclerView recyclerView, @NonNull RecyclerView.ViewHolder viewHolder, @NonNull RecyclerView.ViewHolder target) {
+                return false;
+            }
 
+            @Override
+            public void onSwiped(@NonNull RecyclerView.ViewHolder viewHolder, int direction) {
+                events.remove(viewHolder.getAdapterPosition());
+                stadptr.notifyItemRemoved(viewHolder.getAdapterPosition());
+            }
+        });
+
+        helper.attachToRecyclerView(recyclerView);
         return view;
     }
 

@@ -8,12 +8,12 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 
-public class StoryDetailActivity extends AppCompatActivity {
+public class EventDetailActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_story_detail);
+        setContentView(R.layout.activity_event_detail);
 
         TextView storyTitle = findViewById(R.id.titleDetail);
         ImageView storyImage = findViewById(R.id.storyImageDetail);
@@ -21,7 +21,5 @@ public class StoryDetailActivity extends AppCompatActivity {
         storyTitle.setText(getIntent().getStringExtra("title"));
 
         Glide.with(this).load(getIntent().getIntExtra("image",0)).into(storyImage);
-
-
     }
 }

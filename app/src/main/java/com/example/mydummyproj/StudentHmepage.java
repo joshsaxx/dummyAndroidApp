@@ -13,6 +13,7 @@ import android.os.PersistableBundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Toast;
 
 import com.google.android.material.tabs.TabLayout;
@@ -90,9 +91,10 @@ public class StudentHmepage extends AppCompatActivity {
 
 
     public void showStudentLogin(MenuItem item) {
-        displayToast("You've Successfully Logged Out!");
+        displayToast("You've successfully Logged Out!");
         Intent intent = new Intent(this,StudentLogin.class);
         startActivity(intent);
     }
+
 
 }

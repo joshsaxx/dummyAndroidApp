@@ -26,8 +26,7 @@ public class StoriesTabFragment extends Fragment {
 
 
     List <Stories> stories;
-
-
+    Stories story2;
 
 
     public StoriesTabFragment() {
@@ -44,7 +43,7 @@ public class StoriesTabFragment extends Fragment {
 
         stories.add(story);
 
-        final Stories story2 =new Stories("Citi News", "teaches android", R.drawable.citi);
+        story2 = new Stories("Citi News", "teaches android", R.drawable.citi);
         story2.setSubtitle("another subtitle we like");
 
         stories.add(story2);
@@ -83,7 +82,7 @@ public class StoriesTabFragment extends Fragment {
             @Override
             public void onSwiped(@NonNull RecyclerView.ViewHolder viewHolder, int direction) {
                 stories.remove(viewHolder.getAdapterPosition());
-                stadptr.notifyItemChanged(viewHolder.getAdapterPosition());
+                stadptr.notifyItemRemoved(viewHolder.getAdapterPosition());
 
             }
         });
@@ -93,5 +92,9 @@ public class StoriesTabFragment extends Fragment {
 
         return view;
     }
+
+
+
+
 
 }

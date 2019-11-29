@@ -12,7 +12,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Dkb"></activity>
+        <activity android:name=".EventDetailActivity"></activity>
+        <activity android:name=".Dkb" />
         <activity android:name=".StoryDetailActivity" />
         <activity android:name=".ClubheadHomepage" />
         <activity android:name=".ClubheadLogin" />

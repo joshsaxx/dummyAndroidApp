@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -16,6 +17,8 @@ import com.bumptech.glide.Glide;
 import java.util.List;
 
 class StoryAdapter extends RecyclerView.Adapter<StoryAdapter.StoryViewHolder> {
+
+
 
     //this is the context to enable us obtain the layout inflater
     Context context;
@@ -37,7 +40,17 @@ class StoryAdapter extends RecyclerView.Adapter<StoryAdapter.StoryViewHolder> {
     @NonNull
     @Override
     public StoryAdapter.StoryViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        return new StoryAdapter.StoryViewHolder(LayoutInflater.from(context).inflate(R.layout.stories_tab_fragment_item, parent, false));
+
+        View view = LayoutInflater.from(context).inflate(R.layout.stories_tab_fragment_item, parent, false);
+
+        view.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(context, "fytf", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        return new StoryAdapter.StoryViewHolder(view);
     }
 
     //this method helps us to bind each storyitemviewholder with its corresponding story item from the list
@@ -84,7 +97,13 @@ class StoryAdapter extends RecyclerView.Adapter<StoryAdapter.StoryViewHolder> {
         @Override
         public void onClick(View v) {
 
+            Stories stories = storiesList.get(getAdapterPosition());
             Intent detailIntent = new Intent(context, StoryDetailActivity.class);
+            detailIntent.putExtra("title", stories.getTitle());
+            detailIntent.putExtra("image", stories.getImageID());
+            context.startActivity(detailIntent);
+
+
 
 
 
