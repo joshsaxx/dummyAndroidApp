@@ -30,4 +30,11 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this,ClubheadLogin.class);
         startActivity(intent);
     }
+
+    public void showAluminiHomepage(View view) {
+        Intent intent = new Intent(this,AluminiHomepage.class);
+        startActivity(intent);
+    }
+
+
 }
