@@ -52,6 +52,7 @@
     <string name="news_placeholder">News</string>
     <string name="events_placeholder">Events</string>
     <string name="sports_info_placeholder">Here is some news</string>
+    <string name="jobdetail_descriptiontextview">TextView</string>
 
 
     <string-array name="sports_titles">

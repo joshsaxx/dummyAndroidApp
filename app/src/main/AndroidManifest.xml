@@ -12,9 +12,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".AluminiHomepage"></activity>
+        <activity android:name=".JobDetailActivity"></activity>
+        <activity android:name=".AluminiHomepage" />
         <activity android:name=".EventDetailActivity" />
-        <activity android:name=".Dkb" />
         <activity android:name=".StoryDetailActivity" />
         <activity android:name=".ClubheadHomepage" />
         <activity android:name=".ClubheadLogin" />

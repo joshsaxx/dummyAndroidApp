@@ -49,7 +49,7 @@ public class StudentLogin extends AppCompatActivity implements View.OnClickListe
 
     }
 
-    public void userSignin(){
+    /**public void userSignin(){
         String email = editTextEmail.getText().toString().trim();
         String password = editTextPswd.getText().toString().trim();
 
@@ -83,7 +83,7 @@ public class StudentLogin extends AppCompatActivity implements View.OnClickListe
 
             }
         });
-    }
+    }*/
 
     /**public void showStudentSignup(View view) {
         Intent intent = new Intent(this,StudentSignup.class);
@@ -104,10 +104,10 @@ public class StudentLogin extends AppCompatActivity implements View.OnClickListe
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.loginButton:
-                userSignin();
-                /**Intent intent = new Intent(StudentLogin.this, StudentHmepage.class);
+                //userSignin();
+                Intent intent = new Intent(StudentLogin.this, StudentHmepage.class);
                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                startActivity(intent);*/
+                startActivity(intent);
                 break;
         }
         switch (v.getId()) {
