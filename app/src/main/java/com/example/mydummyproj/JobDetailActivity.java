@@ -19,7 +19,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class JobDetailActivity extends AppCompatActivity {
 
    //private GitHubJobsApi gitHubJobsApi;
-    EditText editTextSearch;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,15 +30,15 @@ public class JobDetailActivity extends AppCompatActivity {
         TextView jobLocation = findViewById(R.id.textViewJobLocation);
         TextView jobTitle = findViewById(R.id.textViewJobTitle);
         TextView jobDescription = findViewById(R.id.textViewJobDescription);
-        editTextSearch = findViewById(R.id.editTextSearch);
 
-        ImageButton searchButton = findViewById(R.id.imageButtonSearch);
+
+       /* ImageButton searchButton = findViewById(R.id.imageButtonSearch);
         searchButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 String msg = editTextSearch.getText().toString();
             }
-        });
+        });*/
         /*editTextSearch.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {

@@ -6,6 +6,9 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -27,6 +30,9 @@ public class AluminiHomepage extends AppCompatActivity {
     private ArrayList<Jobs> jobsArrayList;
     private RecyclerView recyclerView;
     private JobAdapter jobAdapter;
+    private EditText editTextSearch;
+
+
 
 
     @Override
@@ -34,10 +40,25 @@ public class AluminiHomepage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_alumini_homepage);
 
-       jobsArrayList = new ArrayList<Jobs>();
+        Toast.makeText(AluminiHomepage.this, "Please Click Button to Display Jobs",Toast.LENGTH_SHORT).show();
+
+        jobsArrayList = new ArrayList<Jobs>();
 
         recyclerView = findViewById(R.id.recyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
+
+        editTextSearch = findViewById(R.id.editTextSearch);
+        ImageButton searchButton = findViewById(R.id.imageButtonSearch);
+        searchButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Log.d(TAG, "onClick: we have clicked");
+                getJobTxt();
+                Toast.makeText(AluminiHomepage.this, "Getting Jobs",Toast.LENGTH_SHORT).show();
+                getJobs(editTextSearch.getText().toString());
+            }
+        });
 
         //textViewResult = findViewById(R.id.textView_result);
 
@@ -49,14 +70,19 @@ public class AluminiHomepage extends AppCompatActivity {
         gitHubJobsApi = retrofit.create(GitHubJobsApi.class);
 
         //jobAdapter = new JobAdapter(new ArrayList<Jobs>(), this);
-        getJobs();
+
 
 
     }
 
-    private void getJobs() {
+    private void getJobTxt(){
+        String msg = editTextSearch.getText().toString();
+        Log.d(TAG, "getJobTxt: "+msg);
+    }
 
-        Call<List<Jobs>> call = gitHubJobsApi.getJobs();
+    private void getJobs(String filter) {
+
+        Call<List<Jobs>> call = gitHubJobsApi.getJobs(filter);
 
         call.enqueue(new Callback<List<Jobs>>() {
 
