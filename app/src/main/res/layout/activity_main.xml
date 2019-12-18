@@ -16,24 +16,19 @@
         android:textColor="@android:color/widget_edittext_dark"
         app:layout_constraintBottom_toTopOf="@+id/faculty_btn"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2"
-        app:layout_constraintVertical_bias="0.339"
-        app:layout_constraintVertical_chainStyle="packed" />
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
     <Button
         android:id="@+id/clbhead_btn"
         android:layout_width="260dp"
         android:layout_height="95dp"
-        android:layout_marginTop="24dp"
         android:background="@drawable/login_button"
         android:onClick="showClubheadLogin"
         android:text="club head"
         android:textColor="@android:color/widget_edittext_dark"
         app:layout_constraintBottom_toTopOf="@+id/alumini_btn"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/faculty_btn" />
 
@@ -41,14 +36,12 @@
         android:id="@+id/faculty_btn"
         android:layout_width="260dp"
         android:layout_height="95dp"
-        android:layout_marginTop="24dp"
         android:background="@drawable/login_button"
         android:onClick="showFacultyLogin"
         android:text="faculty"
         android:textColor="@android:color/widget_edittext_dark"
         app:layout_constraintBottom_toTopOf="@+id/clbhead_btn"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/student_btn" />
 
@@ -56,31 +49,30 @@
         android:id="@+id/textView2"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginLeft="24dp"
-        android:layout_marginTop="70dp"
-        android:layout_marginEnd="24dp"
-        android:layout_marginRight="24dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
         android:gravity="center_horizontal"
         android:text="Please Select The Catergory You Belong To:"
         android:textSize="18sp"
         android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/student_btn"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="spread" />
 
     <Button
         android:id="@+id/alumini_btn"
         android:layout_width="260dp"
         android:layout_height="95dp"
-        android:layout_marginTop="24dp"
-        android:text="Alumini"
+        android:layout_marginBottom="24dp"
         android:background="@drawable/login_button"
         android:onClick="showAluminiHomepage"
+        android:text="Alumini"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/clbhead_btn" />
 

@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.text.Editable;
+import android.text.Html;
 import android.text.TextWatcher;
 import android.view.View;
 import android.widget.Button;
@@ -59,7 +60,7 @@ public class JobDetailActivity extends AppCompatActivity {
         jobType.setText(getIntent().getStringExtra("jobType"));
         jobLocation.setText(getIntent().getStringExtra("jobLocation"));
         jobTitle.setText(getIntent().getStringExtra("jobTitle"));
-        jobDescription.setText(getIntent().getStringExtra("jobDescription"));
+        jobDescription.setText(Html.fromHtml(getIntent().getStringExtra("jobDescription")));
     }
 
    /* private void filter(String text){

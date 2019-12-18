@@ -14,6 +14,8 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
 import java.util.List;
 
+import static android.content.Intent.FLAG_ACTIVITY_NEW_TASK;
+
 public class JobAdapter extends RecyclerView.Adapter<JobAdapter.JobViewHolder>{
 
 
@@ -77,6 +79,8 @@ public class JobAdapter extends RecyclerView.Adapter<JobAdapter.JobViewHolder>{
             detailIntent.putExtra("jobLocation",jobs.getLocation());
             detailIntent.putExtra("jobTitle",jobs.getTitle());
             detailIntent.putExtra("jobDescription",jobs.getDescription());
+
+            detailIntent.setFlags(FLAG_ACTIVITY_NEW_TASK);
 
             mContext.startActivity(detailIntent);
 
